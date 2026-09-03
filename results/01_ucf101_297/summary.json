@@ -1,0 +1,16 @@
+{
+  "best_epoch": 2,
+  "best_validation_accuracy": 1.0,
+  "test_loss": 0.5185641430793925,
+  "test_accuracy": 1.0,
+  "elapsed_minutes": 62.710370508829754,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "classes": [
+    "Basketball",
+    "PlayingDaf",
+    "HorseRace",
+    "HorseRiding",
+    "PlayingDhol"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "split": "source_stratified_80_20_holdout",
+  "model_selection": "fixed_6_head_plus_10_finetune_epochs; final_epoch; no_validation_set",
+  "final_epoch": 16,
+  "train": {
+    "count": 191,
+    "accuracy": 0.8795811518324608,
+    "balanced_accuracy": 0.8898328234265734,
+    "macro_f1": 0.87338623521386
+  },
+  "test": {
+    "count": 46,
+    "accuracy": 0.8260869565217391,
+    "balanced_accuracy": 0.8533231474407945,
+    "macro_f1": 0.8244590939824206
+  },
+  "test_hard_negative_count": 4,
+  "test_hard_negative_normal_recall": 1.0,
+  "elapsed_minutes": 84.31603899002076,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

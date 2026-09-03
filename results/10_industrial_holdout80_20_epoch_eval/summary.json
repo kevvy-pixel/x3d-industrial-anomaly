@@ -1,0 +1,33 @@
+{
+  "split": "source_stratified_80_20_holdout",
+  "model_selection": "best epoch selected by repeated evaluation on the 20% epoch-eval split",
+  "statistical_warning": "the 20% split is used for model selection and is not an unbiased final test set",
+  "best_epoch": 13,
+  "best_epoch_eval_macro_f1": 0.8666666666666667,
+  "best_epoch_eval_accuracy": 0.8695652173913043,
+  "best_epoch_eval_loss": 0.681754760120226,
+  "final_epoch": 16,
+  "best_epoch_train": {
+    "count": 191,
+    "accuracy": 0.8848167539267016,
+    "balanced_accuracy": 0.903239729020979,
+    "macro_f1": 0.8814771907290219
+  },
+  "best_epoch_eval": {
+    "count": 46,
+    "accuracy": 0.8695652173913043,
+    "balanced_accuracy": 0.8907563025210085,
+    "macro_f1": 0.8666666666666667
+  },
+  "last_epoch_eval": {
+    "count": 46,
+    "accuracy": 0.8478260869565217,
+    "balanced_accuracy": 0.8970588235294118,
+    "macro_f1": 0.8485623781676412
+  },
+  "test_hard_negative_count": 4,
+  "test_hard_negative_normal_recall": 1.0,
+  "elapsed_minutes": 103.62704714934031,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

@@ -1,0 +1,34 @@
+project_root: runs/industrial_5class_baseline
+seed: 2026
+classes:
+  - normal
+  - board_drop
+  - no_gloves
+  - single_hand_or_drag
+  - touch_face
+data:
+  video_root: data/industrial_anomaly
+  annotation_root: data/annotations
+  manifest_root: runs/industrial_5class_baseline/data/manifests
+  folds: 4
+model:
+  name: x3d_m
+  input_frames: 16
+  clip_duration_sec: 2.666667
+  train_temporal_jitter_sec: 0.35
+  crop_size: 224
+  resize_short_train: [256, 300]
+  resize_short_eval: 256
+training:
+  batch_size: 2
+  accumulation_steps: 2
+  num_workers: 2
+  balanced_samples_per_epoch: 24
+  head_epochs: 6
+  finetune_epochs: 10
+  head_lr: 0.001
+  finetune_lr: 0.00005
+  weight_decay: 0.0001
+  label_smoothing: 0.1
+  mixed_precision: true
+  early_stopping_patience: 4

@@ -1,0 +1,61 @@
+{
+  "folds": [
+    {
+      "fold": 0,
+      "best_epoch": 14,
+      "best_validation_macro_f1": 0.6266666666666667,
+      "best_validation_accuracy": 0.8,
+      "best_validation_loss": 1.1283934950828551,
+      "test_loss": 1.1741211056709289,
+      "test_accuracy": 0.7,
+      "test_macro_f1": 0.5047619047619047,
+      "elapsed_minutes": 20.89548812309901
+    },
+    {
+      "fold": 1,
+      "best_epoch": 9,
+      "best_validation_macro_f1": 0.48,
+      "best_validation_accuracy": 0.7,
+      "best_validation_loss": 1.1532004117965697,
+      "test_loss": 1.062444806098938,
+      "test_accuracy": 0.6,
+      "test_macro_f1": 0.4,
+      "elapsed_minutes": 14.43163739045461
+    },
+    {
+      "fold": 2,
+      "best_epoch": 12,
+      "best_validation_macro_f1": 0.5599999999999999,
+      "best_validation_accuracy": 0.7777777777777778,
+      "best_validation_loss": 1.0514696968926325,
+      "test_loss": 1.0174052476882935,
+      "test_accuracy": 0.6,
+      "test_macro_f1": 0.3333333333333333,
+      "elapsed_minutes": 20.4694318095843
+    },
+    {
+      "fold": 3,
+      "best_epoch": 10,
+      "best_validation_macro_f1": 0.5047619047619047,
+      "best_validation_accuracy": 0.7,
+      "best_validation_loss": 1.2593710780143739,
+      "test_loss": 1.1668749517864652,
+      "test_accuracy": 0.6666666666666666,
+      "test_macro_f1": 0.31111111111111106,
+      "elapsed_minutes": 21.220511217912037
+    }
+  ],
+  "fold_test_accuracy_mean": 0.6416666666666666,
+  "fold_test_accuracy_std": 0.04999999999999999,
+  "fold_test_macro_f1_mean": 0.3873015873015873,
+  "fold_test_macro_f1_std": 0.08694008849288352,
+  "oof_window_count": 39,
+  "oof_window_accuracy": 0.6410256410256411,
+  "oof_window_balanced_accuracy": 0.495,
+  "oof_window_macro_f1": 0.41486842105263155,
+  "oof_source_count": 36,
+  "oof_source_accuracy": 0.6111111111111112,
+  "oof_source_macro_f1": 0.41198380566801623,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

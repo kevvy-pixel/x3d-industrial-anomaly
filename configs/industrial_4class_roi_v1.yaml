@@ -1,0 +1,48 @@
+project_root: runs/industrial_4class_roi_v1
+seed: 2026
+classes:
+  - normal
+  - board_drop
+  - single_hand
+  - touch_face
+data:
+  video_root: data/industrial_anomaly
+  annotation_root: data/annotations
+  manifest_root: runs/industrial_4class_roi_v1/data/manifests
+  folds: 4
+  source_aliases:
+    single_hand:
+      video_dir: single_hand
+      annotation_dir: single_hand_or_drag
+      annotation_label: single_hand_or_drag
+  normal_from_anomaly:
+    enabled: true
+    safety_margin_sec: 1.0
+    stride_sec: 2.666667
+    max_windows_per_source: 6
+model:
+  name: x3d_m
+  input_mode: roi
+  input_frames: 16
+  clip_duration_sec: 2.666667
+  train_temporal_jitter_sec: 0.35
+  crop_size: 224
+  roi_expand_ratio: 0.08
+  roi_train_shift_ratio: 0.03
+  roi_train_scale: [0.97, 1.03]
+  horizontal_flip: true
+  resize_short_train: [256, 300]
+  resize_short_eval: 256
+training:
+  batch_size: 2
+  accumulation_steps: 2
+  num_workers: 0
+  balanced_samples_per_epoch: 24
+  head_epochs: 6
+  finetune_epochs: 10
+  head_lr: 0.001
+  finetune_lr: 0.00005
+  weight_decay: 0.0001
+  label_smoothing: 0.1
+  mixed_precision: true
+  early_stopping_patience: 4

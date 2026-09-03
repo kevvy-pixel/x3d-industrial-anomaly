@@ -1,0 +1,38 @@
+project_root: runs/ucf101_fewshot36
+seed: 2026
+classes:
+  - Basketball
+  - PlayingDaf
+  - HorseRace
+  - HorseRiding
+  - PlayingDhol
+data:
+  video_root: data/ucf101_mirror
+  manifest_root: runs/ucf101_fewshot36/data/manifests
+  split_counts:
+    Basketball: {train: 4, val: 2, test: 2}
+    PlayingDaf: {train: 3, val: 1, test: 1}
+    HorseRace: {train: 4, val: 1, test: 2}
+    HorseRiding: {train: 2, val: 1, test: 1}
+    PlayingDhol: {train: 8, val: 2, test: 2}
+model:
+  name: x3d_m
+  input_frames: 16
+  sampling_rate: 5
+  crop_size: 224
+  resize_short_train: [256, 320]
+  resize_short_eval: 256
+training:
+  batch_size: 2
+  accumulation_steps: 2
+  num_workers: 2
+  head_epochs: 10
+  finetune_epochs: 15
+  head_lr: 0.001
+  finetune_lr: 0.00005
+  weight_decay: 0.0001
+  label_smoothing: 0.1
+  mixed_precision: true
+  early_stopping_patience: 5
+evaluation:
+  temporal_views: 1

@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Private datasets, generated manifests and training runs
+data/
+runs/
+logs/
+
+# Model artifacts never belong in this research repository
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Potentially identifying row-level predictions
+*predictions.csv
+
+# Large source media
+*.mp4
+*.avi
+*.mov
+*.mkv

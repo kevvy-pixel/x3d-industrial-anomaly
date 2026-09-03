@@ -1,0 +1,64 @@
+project_root: runs/industrial_holdout80_20_epoch_eval
+seed: 2026
+classes:
+  - normal
+  - board_drop
+  - single_hand
+  - touch_face
+data:
+  video_root: data/industrial_anomaly
+  annotation_root: data/annotations
+  manifest_root: runs/industrial_holdout80_20_epoch_eval/data/manifests
+  test_fraction: 0.2
+  label_aliases:
+    single_hand_or_drag: single_hand
+  source_groups:
+    - name: normal
+      video_dir: normal
+      annotation_dir: normal
+      normal: true
+    - name: board_drop
+      video_dir: board_drop
+      annotation_dir: board_drop
+      default_label: board_drop
+      event_window_mode: centered
+    - name: single_hand
+      video_dir: single_hand
+      annotation_dir: single_hand
+      default_label: single_hand
+      event_window_mode: centered
+    - name: touch_face
+      video_dir: touch_face
+      annotation_dir: touch_face
+      default_label: touch_face
+      event_window_mode: centered
+    - name: single_hand+board_drop
+      video_dir: single_hand+board_drop
+      annotation_dir: single_hand+board_drop
+      event_window_mode: annotation
+  normal_from_anomaly:
+    enabled: true
+    safety_margin_sec: 1.0
+    stride_sec: 2.666667
+    max_windows_per_source: 6
+model:
+  name: x3d_m
+  input_mode: full_frame
+  input_frames: 16
+  clip_duration_sec: 2.666667
+  train_temporal_jitter_sec: 0.35
+  crop_size: 224
+  resize_short_train: [256, 300]
+  resize_short_eval: 256
+training:
+  batch_size: 2
+  accumulation_steps: 2
+  num_workers: 0
+  balanced_samples_per_epoch: 128
+  head_epochs: 6
+  finetune_epochs: 10
+  head_lr: 0.001
+  finetune_lr: 0.00005
+  weight_decay: 0.0001
+  label_smoothing: 0.1
+  mixed_precision: true

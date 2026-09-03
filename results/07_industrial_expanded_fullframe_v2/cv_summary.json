@@ -1,0 +1,63 @@
+{
+  "folds": [
+    {
+      "fold": 0,
+      "best_epoch": 12,
+      "best_validation_macro_f1": 0.8838383838383839,
+      "best_validation_accuracy": 0.8928571428571429,
+      "best_validation_loss": 0.6905791344387191,
+      "test_loss": 0.7293497064421254,
+      "test_accuracy": 0.8548387096774194,
+      "test_macro_f1": 0.8506871345029239,
+      "elapsed_minutes": 105.34900329907735
+    },
+    {
+      "fold": 1,
+      "best_epoch": 14,
+      "best_validation_macro_f1": 0.8481900452488689,
+      "best_validation_accuracy": 0.8571428571428571,
+      "best_validation_loss": 0.6956538089684078,
+      "test_loss": 0.6794314980506897,
+      "test_accuracy": 0.8571428571428571,
+      "test_macro_f1": 0.8558823529411765,
+      "elapsed_minutes": 110.38132671912511
+    },
+    {
+      "fold": 2,
+      "best_epoch": 6,
+      "best_validation_macro_f1": 0.8335421888053467,
+      "best_validation_accuracy": 0.8392857142857143,
+      "best_validation_loss": 0.7569465456264359,
+      "test_loss": 0.771223686517231,
+      "test_accuracy": 0.8095238095238095,
+      "test_macro_f1": 0.8035714285714286,
+      "elapsed_minutes": 64.83229745229086
+    },
+    {
+      "fold": 3,
+      "best_epoch": 6,
+      "best_validation_macro_f1": 0.7694063036355125,
+      "best_validation_accuracy": 0.7903225806451613,
+      "best_validation_loss": 0.842625662203758,
+      "test_loss": 0.7923881113529205,
+      "test_accuracy": 0.7857142857142857,
+      "test_macro_f1": 0.7698031135531136,
+      "elapsed_minutes": 65.52168369690577
+    }
+  ],
+  "fold_test_accuracy_mean": 0.8268049155145929,
+  "fold_test_accuracy_std": 0.0350873234423976,
+  "fold_test_macro_f1_mean": 0.8199860073921607,
+  "fold_test_macro_f1_std": 0.040901785053013215,
+  "oof_window_count": 237,
+  "oof_window_accuracy": 0.8270042194092827,
+  "oof_window_balanced_accuracy": 0.8229148207218383,
+  "oof_window_macro_f1": 0.8246748420661464,
+  "oof_source_count": 160,
+  "oof_source_accuracy": 0.80625,
+  "oof_source_macro_f1": 0.8192914971603497,
+  "oof_hard_negative_count": 29,
+  "oof_hard_negative_normal_recall": 0.7586206896551724,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}
