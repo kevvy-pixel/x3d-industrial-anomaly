@@ -1,0 +1,27 @@
+{
+  "model": "x3d_m",
+  "format": "torchscript",
+  "input_mode": "full_frame",
+  "classes": ["normal", "touch_face"],
+  "checkpoint_file": "../experiment/x3d_m_normal_touch_face.ts",
+  "checkpoint_sha256": "B267EDF7DF41BE50C4DC477D5D925670F9CF82F6CBCCB189911E5AE3D8DEDD94",
+  "selected_epoch": 13,
+  "input_frames": 16,
+  "adaptive_window_sec": {"fps16": 1.0, "fps24": 0.8, "fps30": 0.7},
+  "preprocessing": {
+    "resize_short_side": 256,
+    "center_crop": 224,
+    "rgb_mean": [0.45, 0.45, 0.45],
+    "rgb_std": [0.225, 0.225, 0.225]
+  },
+  "selection_split": "same frozen source-level validation split as the four-class experiment",
+  "selection_metric": "macro_f1",
+  "metrics_at_threshold_0_68": {
+    "window_count": 1983,
+    "touch_face_precision": 0.7938144329896907,
+    "touch_face_recall": 0.8279569892473119,
+    "touch_face_f1": 0.8105263157894737,
+    "macro_f1": 0.9004962087421945
+  },
+  "warning": "The frozen validation split was used for epoch and threshold selection. Calibrate event-level performance on independent continuous site video before final acceptance."
+}

@@ -1,0 +1,13 @@
+{
+  "sample_id": "data1:board_drop/21.mp4#a1-w0",
+  "truth": "board_drop",
+  "prediction": "board_drop",
+  "confidence": 0.3902439773082733,
+  "latency_ms": 72.09540018811822,
+  "probabilities": [
+    0.1880883425474167,
+    0.23452405631542206,
+    0.3902439773082733,
+    0.18714360892772675
+  ]
+}

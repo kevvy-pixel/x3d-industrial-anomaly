@@ -1,0 +1,20 @@
+{
+  "experiment": "D:\\CondaData\\factory_x3d_m\\experiment",
+  "epochs": 30,
+  "batch_size": 8,
+  "grad_accum": 2,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "workers": 8,
+  "seed": 20260911,
+  "resume": null,
+  "classes": [
+    "normal",
+    "single_hand",
+    "board_drop",
+    "touch_face"
+  ],
+  "torch": "2.5.1",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

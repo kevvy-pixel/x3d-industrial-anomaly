@@ -1,0 +1,19 @@
+{
+  "experiment": "D:\\CondaData\\factory_x3d_m_touchface_binary\\experiment",
+  "backbone": "D:\\CondaData\\factory_x3d_m\\experiment\\best.pt",
+  "epochs": 30,
+  "batch_size": 8,
+  "grad_accum": 2,
+  "lr": 5e-05,
+  "weight_decay": 0.0001,
+  "workers": 6,
+  "seed": 20260915,
+  "classes": [
+    "normal",
+    "touch_face"
+  ],
+  "torch": "2.0.1+cu118",
+  "cuda": "11.8",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "selection_metric": "macro_f1"
+}

@@ -1,0 +1,60 @@
+{
+  "scope": "fixed validation clips; probabilities are before stream smoothing/confirmation",
+  "count": 1983,
+  "default_0_5": {
+    "threshold": 0.5,
+    "tp": 81,
+    "fp": 28,
+    "tn": 1862,
+    "fn": 12,
+    "precision": 0.7431192660550459,
+    "recall": 0.8709677419354839,
+    "touch_face_f1": 0.801980198019802,
+    "macro_f1": 0.8956766027293483
+  },
+  "best_touch_face_f1": {
+    "threshold": 0.684,
+    "tp": 77,
+    "fp": 20,
+    "tn": 1870,
+    "fn": 16,
+    "precision": 0.7938144329896907,
+    "recall": 0.8279569892473119,
+    "touch_face_f1": 0.8105263157894737,
+    "macro_f1": 0.9004962087421945
+  },
+  "best_macro_f1": {
+    "threshold": 0.684,
+    "tp": 77,
+    "fp": 20,
+    "tn": 1870,
+    "fn": 16,
+    "precision": 0.7938144329896907,
+    "recall": 0.8279569892473119,
+    "touch_face_f1": 0.8105263157894737,
+    "macro_f1": 0.9004962087421945
+  },
+  "best_recall_with_precision_at_least_0_80": {
+    "threshold": 0.721,
+    "tp": 72,
+    "fp": 18,
+    "tn": 1872,
+    "fn": 21,
+    "precision": 0.8,
+    "recall": 0.7741935483870968,
+    "touch_face_f1": 0.7868852459016393,
+    "macro_f1": 0.888287983775562
+  },
+  "best_precision_with_recall_at_least_0_90": {
+    "threshold": 0.284,
+    "tp": 84,
+    "fp": 55,
+    "tn": 1835,
+    "fn": 9,
+    "precision": 0.60431654676259,
+    "recall": 0.9032258064516129,
+    "touch_face_f1": 0.7241379310344828,
+    "macro_f1": 0.8534990672847829
+  },
+  "predictions_sha256": "b2789b3d3258f51a380673f8caf1e622564bb3accaaf75c71bd4884bc7ade3fe"
+}

@@ -1,0 +1,41 @@
+deployment:
+  device_id: worker-camera-01
+model:
+  classes: [normal, single_hand, touch_face, board_drop]
+stream:
+  url: ""
+  transport: tcp
+  open_timeout_ms: 10000
+  read_timeout_ms: 10000
+  buffer_size: 2
+  fallback_fps: 24
+  reconnect_initial_sec: 2
+  reconnect_max_sec: 30
+  max_reconnect_attempts: 0
+alarm:
+  thresholds: {single_hand: 0.60, touch_face: 0.65, board_drop: 0.60}
+  confirmation:
+    single_hand: {mode: consecutive, count: 2}
+    touch_face: {mode: consecutive, count: 2}
+    board_drop: {mode: any, window: 2, min_count: 1}
+  merge_gap_sec: 2.0
+  events_jsonl: runtime/events.jsonl
+evidence:
+  directory: runtime/alarms
+  pre_sec: 1.5
+  post_sec: 1.5
+  max_width: 1280
+callback:
+  url: ""
+  timeout_sec: 15
+  retries: 3
+  retry_backoff_sec: 1
+  media_field: imageBase64
+logging:
+  file: runtime/logs/service.log
+  level: INFO
+  max_bytes: 10485760
+  backups: 5
+health:
+  file: runtime/health.json
+  update_interval_sec: 5

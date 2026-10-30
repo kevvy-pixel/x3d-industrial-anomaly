@@ -1,0 +1,6 @@
+{
+  "normal": 0,
+  "single_hand": 1,
+  "board_drop": 2,
+  "touch_face": 3
+}

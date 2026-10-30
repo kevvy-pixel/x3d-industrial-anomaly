@@ -1,0 +1,26 @@
+model:
+  checkpoint: ../experiment/x3d_m_normal_touch_face.ts
+  classes: [normal, touch_face]
+  input_frames: 16
+  window:
+    adaptive_by_fps: true
+    fps16: 1.0
+    fps24: 0.8
+    fps30: 0.7
+  resize_short: 256
+  crop_size: 224
+  mean: [0.45, 0.45, 0.45]
+  std: [0.225, 0.225, 0.225]
+
+inference:
+  stride_sec: 0.3
+  smoothing_windows: 3
+  device: auto
+
+alarm:
+  class_thresholds:
+    touch_face: 0.65
+  confirm_windows: 2
+  merge_gap_sec: 2.0
+  events_jsonl: logs/events.jsonl
+  evidence_dir: outputs/alarms

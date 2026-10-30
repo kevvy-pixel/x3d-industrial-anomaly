@@ -1,0 +1,95 @@
+{
+  "classes": [
+    "normal",
+    "touch_face"
+  ],
+  "metrics": {
+    "val_loss": 0.35886308134533934,
+    "accuracy": 0.9798285426122038,
+    "macro_f1": 0.8956766027293483,
+    "roc_auc": 0.9509245036126757,
+    "pr_auc": 0.8434126301580313,
+    "per_class": {
+      "normal": {
+        "precision": 0.9935965848452508,
+        "recall": 0.9851851851851852,
+        "f1": 0.9893730074388948,
+        "support": 1890
+      },
+      "touch_face": {
+        "precision": 0.7431192660550459,
+        "recall": 0.8709677419354839,
+        "f1": 0.801980198019802,
+        "support": 93
+      }
+    },
+    "confusion_matrix": [
+      [
+        1862,
+        28
+      ],
+      [
+        12,
+        81
+      ]
+    ],
+    "epoch": 13,
+    "train_loss": 0.35212859883904457,
+    "lr": 3.0197792270443985e-05,
+    "seconds": 127.16233372688293
+  },
+  "config": {
+    "experiment": "D:\\CondaData\\factory_x3d_m_touchface_binary\\experiment",
+    "backbone": "D:\\CondaData\\factory_x3d_m\\experiment\\best.pt",
+    "epochs": 30,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "lr": 5e-05,
+    "weight_decay": 0.0001,
+    "workers": 6,
+    "seed": 20260915,
+    "classes": [
+      "normal",
+      "touch_face"
+    ],
+    "torch": "2.0.1+cu118",
+    "cuda": "11.8",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "selection_metric": "macro_f1"
+  },
+  "input": {
+    "layout": "NCTHW",
+    "shape": [
+      1,
+      3,
+      16,
+      224,
+      224
+    ],
+    "mean": [
+      0.45,
+      0.45,
+      0.45
+    ],
+    "std": [
+      0.225,
+      0.225,
+      0.225
+    ]
+  },
+  "recommended_stream_settings": {
+    "adaptive_by_fps": true,
+    "window_sec": {
+      "fps16": 1.0,
+      "fps24": 0.8,
+      "fps30": 0.7
+    },
+    "frames": 16,
+    "stride_sec": 0.3,
+    "smooth_windows": 3,
+    "touch_face_threshold": 0.68,
+    "confirmation": "consecutive_2",
+    "merge_gap_sec": 2.0
+  },
+  "torchscript_max_error": 0.0
+}

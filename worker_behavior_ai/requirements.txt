@@ -1,0 +1,7 @@
+ultralytics>=8.4
+opencv-python
+numpy
+scikit-learn
+PyYAML
+# 仅训练/导出模型需要：
+torch>=2.0

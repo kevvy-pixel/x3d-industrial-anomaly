@@ -1,0 +1,5 @@
+numpy>=1.26,<3
+opencv-python>=4.9,<5
+av>=14,<19
+PyYAML>=6,<7
+# Install torch separately (CPU or the CUDA build matching the target computer).

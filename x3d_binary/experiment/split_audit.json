@@ -1,0 +1,37 @@
+{
+  "source_samples": "D:\\CondaData\\factory_x3d_m\\experiment\\samples.csv",
+  "source_split": "D:\\CondaData\\factory_x3d_m\\experiment\\source_split.csv",
+  "source_samples_sha256": "10e44ff367f417d9f8095b3838bc17d044f31f2ef56630274ecd3bb6d7d57620",
+  "source_split_sha256": "7cdccd3c055b49fb4bad9f9585e3592d35ace3f8d87b7204a9e2cd4f21802059",
+  "split_reused_without_resplitting": true,
+  "train_val_source_overlap": 0,
+  "classes": [
+    "normal",
+    "touch_face"
+  ],
+  "negative_definition": [
+    "normal",
+    "single_hand",
+    "board_drop"
+  ],
+  "sample_counts": {
+    "train/normal": 7600,
+    "train/touch_face": 321,
+    "val/normal": 1890,
+    "val/touch_face": 93
+  },
+  "source_counts": {
+    "train": 849,
+    "val": 213
+  },
+  "original_label_counts": {
+    "train/board_drop": 91,
+    "train/normal": 6967,
+    "train/single_hand": 542,
+    "train/touch_face": 321,
+    "val/board_drop": 28,
+    "val/normal": 1736,
+    "val/single_hand": 126,
+    "val/touch_face": 93
+  }
+}
